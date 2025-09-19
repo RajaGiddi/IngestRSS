@@ -56,6 +56,17 @@ The primary goal of IngestRSS is to provide researchers with a robust, scalable 
 - CloudFormation templates are located in `src/infra/cloudformation/`.
 - Lambda function code is in `src/lambda_function/src/`.
 
+### S3 bucket naming convention
+
+This project uses a single S3 base name configured via the `S3_BASE_NAME` environment variable. The launcher and `template.env` generate two buckets from this base:
+
+- Content bucket: `${S3_BASE_NAME}-${AWS_REGION}`
+- Zipped lambda artifacts bucket: `${S3_BASE_NAME}-zipped-${AWS_REGION}`
+
+Using a `-zipped-` suffix for the zipped bucket prevents accidental collisions with the content bucket when deploying CloudFormation stacks.
+
+If you regenerate `.env` using the launcher (`python src/launch/launch_env.py`) it will prompt for `S3_BASE_NAME` (default: `ai-researcher-rss`) and write both derived env vars into the saved `.env` file.
+
 ## 📊 Monitoring
 
 The Lambda function logs its activities to CloudWatch Logs. You can monitor the function's performance and any errors through the AWS CloudWatch console.
