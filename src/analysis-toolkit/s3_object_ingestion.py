@@ -1,3 +1,4 @@
+import os
 import boto3
 import matplotlib.pyplot as plt
 from datetime import datetime, timedelta
@@ -47,7 +48,7 @@ def plot_creation_dates(dates):
     print("Graph saved as 's3_object_creation_dates.png'")
 
 def main():
-    bucket_name = 'open-rss-articles-us-east-1'
+    bucket_name = os.getenv('S3_BUCKET_NAME', '')
     dates = get_s3_object_creation_dates(bucket_name)
     plot_creation_dates(dates)
 

@@ -155,15 +155,17 @@ def deploy_infrastructure():
     deploy_cloudformation('s3.yaml', 'S3',
                         parameters=[
                             {
-                                'ParameterKey': 'BucketName',
-                                'ParameterValue': os.getenv('S3_BUCKET_NAME')
+                                'ParameterKey': 'S3BaseName',
+                                'ParameterValue': os.getenv('S3_BASE_NAME')
                             }
                         ])
+    # For the zipped artifacts bucket we pass the base name with a '-zipped' suffix so the template
+    # will construct ${S3BaseName}-zipped-${AWS::Region}
     deploy_cloudformation('s3.yaml', 'S3-zipped',
                         parameters=[
                             {
-                                'ParameterKey': 'BucketName',
-                                'ParameterValue': os.getenv('S3_LAMBDA_ZIPPED_BUCKET_NAME')
+                                'ParameterKey': 'S3BaseName',
+                                'ParameterValue': f"{os.getenv('S3_BASE_NAME')}-zipped"
                             }
                         ])
     deploy_cloudformation('sqs.yaml', 'SQS',

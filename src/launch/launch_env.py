@@ -61,7 +61,9 @@ def main():
     env_vars["STACK_BASE"] = env_vars["LAMBDA_FUNCTION_NAME"]
     env_vars["LAMBDA_EXECUTION_ROLE_NAME"] = f"rss-feed-processor-role-{env_vars['AWS_REGION']}"
     env_vars["LAMBDA_ROLE_ARN"] = f"arn:aws:iam::{env_vars['AWS_ACCOUNT_ID']}:role/{env_vars['LAMBDA_EXECUTION_ROLE_NAME']}"
-    env_vars["S3_BUCKET_NAME"] = f"open-rss-articles-{env_vars['AWS_REGION']}"
+    # Use a single base name for S3 buckets so zipped and content buckets don't collide
+    env_vars["S3_BASE_NAME"] = get_env_value("S3_BASE_NAME", "Enter S3 base name:", options=["ai-researcher-rss"], advanced=advanced_mode)
+    env_vars["S3_BUCKET_NAME"] = f"{env_vars['S3_BASE_NAME']}-{env_vars['AWS_REGION']}"
     env_vars["DYNAMODB_TABLE_NAME"] = get_env_value("DYNAMODB_TABLE_NAME", "Enter DynamoDB Table Name:", options=["rss-feeds-table", "custom-rss-table"], advanced=advanced_mode)
     env_vars["SQS_QUEUE_NAME"] = get_env_value("SQS_QUEUE_NAME", "Enter SQS Queue Name:", options=["rss-feed-queue", "custom-rss-queue"], advanced=advanced_mode)
     
@@ -70,7 +72,7 @@ def main():
     env_vars["LAMBDA_LAYER_NAME"] = f"ingest-rss-lambda-layer-{env_vars['AWS_REGION']}"
     env_vars["LAMBDA_LAYER_ARN"] = f"arn:aws:lambda:{env_vars['AWS_REGION']}:{env_vars['AWS_ACCOUNT_ID']}:layer:{env_vars['LAMBDA_LAYER_NAME']}:{env_vars['LAMBDA_LAYER_VERSION']}"
     env_vars["S3_LAYER_BUCKET_NAME"] = f"rss-feed-processor-layers-{env_vars['AWS_REGION']}"
-    env_vars["S3_LAMBDA_ZIPPED_BUCKET_NAME"] = f"open-rss-lambda-{env_vars['AWS_REGION']}"
+    env_vars["S3_LAMBDA_ZIPPED_BUCKET_NAME"] = f"{env_vars['S3_BASE_NAME']}-zipped-{env_vars['AWS_REGION']}"
     env_vars["S3_LAYER_KEY_NAME"] = get_env_value("S3_LAYER_KEY_NAME", "Enter S3 Layer Key Name:", options=["RSSFeedProcessorDependencies", "CustomDependencies"], advanced=advanced_mode)
     env_vars["SQS_QUEUE_URL"] = f"https://sqs.{env_vars['AWS_REGION']}.amazonaws.com/{env_vars['AWS_ACCOUNT_ID']}/{env_vars['SQS_QUEUE_NAME']}"
     env_vars["SQS_QUEUE_ARN"] = f"arn:aws:sqs:{env_vars['AWS_REGION']}:{env_vars['AWS_ACCOUNT_ID']}:{env_vars['SQS_QUEUE_NAME']}"
@@ -98,7 +100,7 @@ def main():
     # Pinecone Configuration (only if pinecone is selected)
     if env_vars["STORAGE_STRATEGY"] == "pinecone":
         env_vars["PINECONE_API_KEY"] = get_env_value("PINECONE_API_KEY", "Enter Pinecone API Key:", advanced=advanced_mode)
-        env_vars["PINECONE_DB_NAME"] = get_env_value("PINECONE_DB_NAME", "Enter Pinecone DB Name:", options=["open-rss-articles", "custom-rss-db"], advanced=advanced_mode)
+        env_vars["PINECONE_DB_NAME"] = get_env_value("PINECONE_DB_NAME", "Enter Pinecone DB Name:", options=["ai-researcher-rss", "custom-rss-db"], advanced=advanced_mode)
     
     # Display summary
     display_summary(env_vars)

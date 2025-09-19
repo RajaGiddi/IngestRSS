@@ -2,15 +2,16 @@ AWSTemplateFormatVersion: '2010-09-09'
 Description: 'CloudFormation template for RSS Feed Processor S3 Bucket'
 
 Parameters:
-  BucketName:
+  S3BaseName:
     Type: String
-    Description: "Name of the Lambda Execution Role"
+    Default: ai-researcher-rss
+    Description: "Base name for the S3 bucket; the final name will be ${S3BaseName}-${AWS::Region}" 
 
 Resources:
   ArticleContentBucket:
     Type: AWS::S3::Bucket
     Properties:
-      BucketName: !Ref BucketName
+      BucketName: !Sub '${S3BaseName}-${AWS::Region}'
       VersioningConfiguration:
         Status: Enabled
       BucketEncryption:
