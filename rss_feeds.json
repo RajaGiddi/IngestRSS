@@ -1,12 +1,752 @@
 [
   {
     "u": "https://export.arxiv.org/rss/cs",
-    "dt": 1758153600,
+    "dt": 1758338694,
     "update": 1
   },
   {
-    "u": "https://www.ncbi.nlm.nih.gov/feed/rss.cgi?ChanKey=PubMedNews",
-    "dt": 1758153600,
+    "u": "https://rss.arxiv.org/rss/cs",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/math",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/physics",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/stat",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/q-bio",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/q-fin",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/eess",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/econ",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/cond-mat",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/astro-ph",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/hep-ph",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/hep-th",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/hep-ex",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/hep-lat",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/nlin",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/quant-ph",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/cs.AI",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/cs.CL",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/cs.CV",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/cs.CE",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/cs.CG",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/cs.CY",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/cs.DC",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/cs.DB",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/cs.DL",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/cs.DS",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/cs.ET",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/cs.FL",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/cs.GL",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/cs.GT",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/cs.HC",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/cs.IR",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/cs.IT",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/cs.LG",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/cs.LO",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/cs.MA",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/cs.MM",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/cs.MS",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/cs.NA",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/cs.NE",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/cs.NI",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/cs.OH",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/cs.OS",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/cs.PF",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/cs.PL",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/cs.RO",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/cs.SC",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/cs.SD",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/cs.SE",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/cs.SI",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/cs.SY",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/math.AG",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/math.AT",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/math.AP",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/math.CA",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/math.CO",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/math.CT",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/math.CV",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/math.DG",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/math.DS",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/math.FA",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/math.GM",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/math.GN",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/math.GR",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/math.GT",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/math.HO",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/math.IT",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/math.KT",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/math.LO",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/math.MG",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/math.MP",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/math.NA",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/math.NT",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/math.OA",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/math.OC",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/math.PR",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/math.QA",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/math.RA",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/math.RT",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/math.SG",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/math.SP",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/math.ST",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/physics.app-ph",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/physics.atom-ph",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/physics.chem-ph",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/physics.class-ph",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/physics.comp-ph",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/physics.data-an",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/physics.ed-ph",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/physics.gen-ph",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/physics.geo-ph",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/physics.hist-ph",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/physics.ins-det",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/physics.med-ph",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/physics.optics",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/physics.plasm-ph",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/physics.soc-ph",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/physics.space-ph",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/cond-mat.mtrl-sci",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/cond-mat.mes-hall",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/cond-mat.supr-con",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/cond-mat.stat-mech",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/cond-mat.soft",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/astro-ph.CO",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/astro-ph.EP",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/astro-ph.GA",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/astro-ph.IM",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/astro-ph.HE",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/astro-ph.SR",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/eess.SP",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/eess.SY",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/eess.IV",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/eess.AS",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/stat.ML",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/stat.AP",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/stat.ME",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/stat.TH",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/q-bio.BM",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/q-bio.GN",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/q-bio.NC",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/q-bio.MN",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/q-bio.PE",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/q-fin.EC",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/q-fin.ST",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://rss.arxiv.org/rss/q-fin.TR",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://asmedigitalcollection.asme.org/rss/site_1000003/LatestOpenIssueArticles_1000002.xml",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://asmedigitalcollection.asme.org/rss/site_1000011/LatestOpenIssueArticles_1000007.xml",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://asmedigitalcollection.asme.org/rss/site_1000021/LatestOpenIssueArticles_1000012.xml",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://asmedigitalcollection.asme.org/rss/site_1000001/LatestOpenIssueArticles_1000001.xml",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://asmedigitalcollection.asme.org/rss/site_1000005/LatestOpenIssueArticles_1000003.xml",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://asmedigitalcollection.asme.org/rss/site_1000007/LatestOpenIssueArticles_1000004.xml",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://asmedigitalcollection.asme.org/rss/site_1000009/LatestOpenIssueArticles_1000005.xml",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://asmedigitalcollection.asme.org/rss/site_1000013/LatestOpenIssueArticles_1000008.xml",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://asmedigitalcollection.asme.org/rss/site_1000249/LatestOpenIssueArticles_1000035.xml",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://asmedigitalcollection.asme.org/rss/site_1000027/LatestOpenIssueArticles_1000015.xml",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://asmedigitalcollection.asme.org/rss/site_1000031/LatestOpenIssueArticles_1000017.xml",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://asmedigitalcollection.asme.org/rss/site_1000033/LatestOpenIssueArticles_1000018.xml",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://asmedigitalcollection.asme.org/rss/site_1000049/LatestOpenIssueArticles_1000026.xml",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://asmedigitalcollection.asme.org/rss/site_1000057/LatestOpenIssueArticles_1000030.xml",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://asmedigitalcollection.asme.org/rss/site_1000053/LatestOpenIssueArticles_1000028.xml",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://asmedigitalcollection.asme.org/rss/site_1000037/LatestOpenIssueArticles_1000020.xml",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://asmedigitalcollection.asme.org/rss/site_1000039/LatestOpenIssueArticles_1000021.xml",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://asmedigitalcollection.asme.org/rss/site_1000041/LatestOpenIssueArticles_1000022.xml",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://asmedigitalcollection.asme.org/rss/site_1000043/LatestOpenIssueArticles_1000023.xml",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://asmedigitalcollection.asme.org/rss/site_1000045/LatestOpenIssueArticles_1000024.xml",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://asmedigitalcollection.asme.org/rss/site_1000055/LatestOpenIssueArticles_1000029.xml",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://asmedigitalcollection.asme.org/rss/site_1000047/LatestOpenIssueArticles_1000025.xml",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://asmedigitalcollection.asme.org/rss/site_1000061/LatestOpenIssueArticles_1000032.xml",
+    "dt": 1758338694,
+    "update": 1
+  },
+  {
+    "u": "https://asmedigitalcollection.asme.org/rss/site_1000029/LatestOpenIssueArticles_1000016.xml",
+    "dt": 1758338694,
     "update": 1
   }
 ]
