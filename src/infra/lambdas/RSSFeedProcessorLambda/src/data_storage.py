@@ -72,21 +72,32 @@ def s3_save_article(article:dict):
         json.dump(article, f)
 
     try:
-        s3.upload_file(file_path, 
-                       CONTENT_BUCKET, 
+        # S3 metadata values must be ASCII. Sanitize metadata to avoid upload errors.
+        def _to_ascii(s: str) -> str:
+            if s is None:
+                return ""
+            try:
+                # Ensure string
+                s = str(s)
+                # Encode to ASCII, ignore non-ascii characters
+                return s.encode('ascii', 'ignore').decode('ascii')
+            except Exception:
+                return ""
+
+        metadata = {
+            "rss": _to_ascii(article.get("rss", "")),
+            "title": _to_ascii(article.get("title", "")),
+            "unixTime": _to_ascii(str(article.get("unixTime", ""))),
+            "article_id": _to_ascii(article.get("article_id", "")),
+            "link": _to_ascii(article.get("link", "")),
+            "rss_id": _to_ascii(article.get("rss_id", ""))
+        }
+
+        s3.upload_file(file_path,
+                       CONTENT_BUCKET,
                        file_key,
-                       ExtraArgs={
-                        "Metadata": 
-                            {
-                                "rss": article.get("rss", ""),
-                                "title": article.get("title", ""),
-                                "unixTime": str(article.get("unixTime", "")),
-                                "article_id": article.get("article_id", ""),
-                                "link": article.get("link", ""),
-                                "rss_id": article.get("rss_id", "")
-                            }
-                        }
-                    )
+                       ExtraArgs={"Metadata": metadata}
+                       )
         logger.info(f"Saved article {article_id} to S3 bucket {CONTENT_BUCKET}")
         
     except Exception as e:
