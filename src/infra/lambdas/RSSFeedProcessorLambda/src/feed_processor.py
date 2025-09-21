@@ -7,6 +7,7 @@ import logging
 from utils import generate_key
 from article_extractor import extract_article
 from article_cleaning import clean_text
+from label_tagger import label_article
 
 logger = logging.getLogger()
 
@@ -50,11 +51,13 @@ def extract_feed_threading(rss: dict, output_queue, stop_thread):
             if pub_date > last_date:
                 title, text = extract_article(entry.link)
                 title, text = clean_text(title), clean_text(text)
+                labels = label_article(f"{title}\n\n{text}")
                 article = {
                     'link': entry.link,
                     'rss': feed_url,
                     'title': title,
                     'content': text,
+                    'tags': labels,
                     'unixTime': pub_date,
                     'rss_id': generate_key(feed_url),
                     'article_id': generate_key(entry.link),
@@ -86,12 +89,13 @@ def extract_feed(rss: dict):
             pub_date = parse_pub_date(entry['published'])
             
             if pub_date > last_date:
-                title, text = extract_article(entry.link) 
+                title, text = extract_article(entry.link)
                 article = {
                     'link': entry.link,
                     'rss': feed_url,
                     'title': title,
-                    'content': text,
+                    'content': clean_text(text),
+                    'tags': label_article(f"{clean_text(title)}\n\n{clean_text(text)}"),
                     'unixTime': pub_date,
                     'rss_id': generate_key(feed_url),
                     'article_id': generate_key(entry.link),
@@ -128,4 +132,4 @@ def parse_pub_date(entry:dict):
                 except ValueError:
                     pass
 
-    return int(datetime.now().timestamp()) # Return current time if no date is found
+    return int(datetime.now().timestamp())

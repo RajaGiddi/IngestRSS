@@ -2,7 +2,6 @@ import boto3
 import json
 import os
 import logging
-from random import randint
 from datetime import datetime
 
 from analytics.embeddings.vector_db import get_index, upsert_vectors, vectorize
@@ -16,7 +15,7 @@ CONTENT_BUCKET = os.getenv("S3_BUCKET_NAME", os.getenv("CONTENT_BUCKET"))
 DYNAMODB_TABLE = os.getenv("DYNAMODB_TABLE_NAME")
 storage_strategy = os.environ.get('STORAGE_STRATEGY')
 
-##### Article Storage #####
+#------ Article Storage ------
 def save_article(article:dict, strategy:str):
     if strategy == "s3":
         s3_save_article(article)
@@ -35,9 +34,9 @@ def pinecone_save_article(article:dict):
 
     # Expected Keys from Pinecone *MUST* include 'id' and 'values'
     data = dict()
-    logging.info(f"Article ID into Pinecone")
+    logging.info("Article ID into Pinecone")
     data["id"] = article["article_id"]
-    logging.info(f"Article content into Pinecone")
+    logging.info("Article content into Pinecone")
     data["values"] = vectorize(article=article["content"])
     
     print(type(data["values"]))
@@ -59,7 +58,7 @@ def s3_save_article(article:dict):
 
     now = datetime.now()
     article_id = article['article_id']
-    logger.info(f"Content ")
+    logger.info("Content ")
     if not article_id:
         logger.error(f"Missing rss_id or article_id in article: {article}")
         return
@@ -77,12 +76,17 @@ def s3_save_article(article:dict):
             if s is None:
                 return ""
             try:
-                # Ensure string
                 s = str(s)
-                # Encode to ASCII, ignore non-ascii characters
                 return s.encode('ascii', 'ignore').decode('ascii')
             except Exception:
                 return ""
+
+        # Include tags in metadata if present
+        tags_list = article.get("tags") or []
+        if isinstance(tags_list, list):
+            tags_val = ",".join([_to_ascii(t) for t in tags_list if t])
+        else:
+            tags_val = _to_ascii(str(tags_list)) if tags_list else ""
 
         metadata = {
             "rss": _to_ascii(article.get("rss", "")),
@@ -90,7 +94,8 @@ def s3_save_article(article:dict):
             "unixTime": _to_ascii(str(article.get("unixTime", ""))),
             "article_id": _to_ascii(article.get("article_id", "")),
             "link": _to_ascii(article.get("link", "")),
-            "rss_id": _to_ascii(article.get("rss_id", ""))
+            "rss_id": _to_ascii(article.get("rss_id", "")),
+            "tags": tags_val
         }
 
         s3.upload_file(file_path,
@@ -104,7 +109,7 @@ def s3_save_article(article:dict):
         logger.error(f"Failed to save article with error: {str(e)}. \n Article: {article} \n Article Type: {type(article)}")
 
 
-###### Feed Storage ######
+#------- Feed Storage ------
 def update_rss_feed(feed:dict, last_pub_dt:int):
     try:
         table = dynamodb.Table(DYNAMODB_TABLE)
