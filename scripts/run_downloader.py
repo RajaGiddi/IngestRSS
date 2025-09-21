@@ -1,17 +1,14 @@
-#!/usr/bin/env python3
 import os
 import sys
 import logging
+from src.search.batch.downloader import S3BatchDownloader
+from dotenv import load_dotenv
 
-# Ensure we run from the repo root and make the repo importable as a package
 ROOT = os.path.dirname(os.path.dirname(__file__))
 os.chdir(ROOT)
 sys.path.insert(0, ROOT)
 
-from dotenv import load_dotenv
 load_dotenv(override=True)
-
-from src.search.batch.downloader import S3BatchDownloader
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("run_downloader")
