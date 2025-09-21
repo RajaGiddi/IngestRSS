@@ -90,12 +90,13 @@ def extract_feed(rss: dict):
             
             if pub_date > last_date:
                 title, text = extract_article(entry.link)
+                title, text = clean_text(title), clean_text(text)
                 article = {
                     'link': entry.link,
                     'rss': feed_url,
                     'title': title,
-                    'content': clean_text(text),
-                    'tags': label_article(f"{clean_text(title)}\n\n{clean_text(text)}"),
+                    'content': text,
+                    'tags': label_article(f"{title}\n\n{text}"),
                     'unixTime': pub_date,
                     'rss_id': generate_key(feed_url),
                     'article_id': generate_key(entry.link),

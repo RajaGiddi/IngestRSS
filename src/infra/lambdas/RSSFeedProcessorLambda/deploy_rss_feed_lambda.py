@@ -5,14 +5,22 @@ import io
 import requests
 import json
 from botocore.exceptions import ClientError
-from src.utils.retry_logic import retry_with_backoff
 import time
 import sys
-from src.infra.deploy_infrastructure import get_or_create_kms_key
+from pathlib import Path
+
+from utils.retry_logic import retry_with_backoff
+from infra.deploy_infrastructure import get_or_create_kms_key
 from dotenv import load_dotenv
-load_dotenv(override=True)
 
 import logging
+
+PROJECT_SRC = Path(__file__).resolve().parents[4] / 'src'
+if str(PROJECT_SRC) not in sys.path:
+    sys.path.insert(0, str(PROJECT_SRC))
+
+load_dotenv(override=True)
+
 logging.basicConfig(level=os.getenv('LOG_LEVEL', 'INFO'))
 
 # Set variables

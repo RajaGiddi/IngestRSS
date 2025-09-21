@@ -2,7 +2,6 @@ import boto3
 import os
 import sys
 import json
-from src.utils.retry_logic import retry_with_backoff
 from botocore.exceptions import ClientError
 from pinecone import Pinecone
 from pinecone import ServerlessSpec
@@ -10,6 +9,18 @@ from pinecone import ServerlessSpec
 
 
 from dotenv import load_dotenv
+from pathlib import Path
+
+PROJECT_SRC = Path(__file__).resolve().parents[2]
+if str(PROJECT_SRC) not in sys.path:
+    sys.path.insert(0, str(PROJECT_SRC))
+
+try:
+    from utils.retry_logic import retry_with_backoff
+except Exception:
+    # Fallback if code expects 'src.' namespace
+    from src.utils.retry_logic import retry_with_backoff
+
 load_dotenv(override=True)
 
 kms_client = boto3.client('kms', region_name=os.getenv("AWS_REGION"))
