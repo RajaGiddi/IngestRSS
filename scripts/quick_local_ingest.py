@@ -1,15 +1,18 @@
-#!/usr/bin/env python3
 import os
 import sys
 import logging
 from dotenv import load_dotenv
+from feed_processor import extract_feed
+from data_storage import s3_save_article
+import boto3
+import json
 
-# Ensure repository root is current working dir and importable
+import argparse
+
 ROOT = os.path.dirname(os.path.dirname(__file__))
 os.chdir(ROOT)
 sys.path.insert(0, ROOT)
 
-# Add lambda src path to import modules directly
 lambda_src = os.path.join(ROOT, 'src', 'infra', 'lambdas', 'RSSFeedProcessorLambda', 'src')
 if lambda_src not in sys.path:
     sys.path.insert(0, lambda_src)
@@ -18,12 +21,6 @@ load_dotenv(override=True)
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger('quick_local_ingest')
 
-from feed_processor import extract_feed
-from data_storage import s3_save_article
-import boto3
-import json
-
-import argparse
 
 parser = argparse.ArgumentParser(description='Quick local ingest for a single RSS feed')
 parser.add_argument('--url', '-u', help='Feed URL to ingest', default='https://export.arxiv.org/rss/cs')
